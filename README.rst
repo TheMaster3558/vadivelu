@@ -17,7 +17,7 @@ API Reference
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Get the available formats for a HTTP code. The formats can be gif, jpg, or both.
 
-Paremeters
+Parameters
 ^^^^^^^^^^
 code: ``int``
     The HTTP code to use
@@ -31,10 +31,10 @@ Raises
 ``ValueError`` if the code provided is not supported by the API
 
 ``pick_available_format(code, priority)``
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Pick a format (gif or jpg) that the API supports for a specific HTTP code.
 
-Paremeters
+Parameters
 ^^^^^^^^^^
 code: ``int``
     The HTTP code to use
@@ -53,7 +53,7 @@ Raises
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Get the media URL for the specified code in the specified format.
 
-Paremeters
+Parameters
 ^^^^^^^^^^
 code: ``int``
     The HTTP code to use
