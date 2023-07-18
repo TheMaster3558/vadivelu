@@ -1,12 +1,11 @@
 from setuptools import setup
 import re
 
-version = ''
 with open('vadivelu/__init__.py') as f:
-    version = re.search(r'^__version__\s*=\s*[\'"]([^\'"]*)[\'"]', f.read(), re.MULTILINE).group(1)
+    # __version: Final[str] = '...'
+    version = re.search(r'^__version__\s*:\s*Final\[str]\s*=\s*[\'"]([^\'"]*)[\'"]', f.read(), re.MULTILINE).group(1)
 
 
-readme = ''
 with open('README.rst') as f:
     readme = f.read()
 
