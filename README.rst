@@ -4,7 +4,7 @@ A Python library for accessing the `Vadivelu API <https://vadivelu.anoram.com/>`
 
 Installation
 ------------
-**Must have Python 3.5 or higher**
+**Must have Python 3.7 or higher**
 
 .. code:: sh
 
