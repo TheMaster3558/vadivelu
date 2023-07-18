@@ -13,44 +13,60 @@ Installation
 API Reference
 -------------
 
-.. code:: python
+``vadivelu.get_available_formats(code)``
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Get the available formats for a HTTP code. The formats can be gif, jpg, or both.
 
-    .. py:function:: get_available_formats(code)
-      :module: vadivelu
-      :param code: The HTTP code to use
-      :type code: :class:`int`
+Paremeters
+^^^^^^^^^^
+code: ``int``
+    The HTTP code to use
 
-      Get the available formats for a HTTP code. The formats can be gif, jpg, or both.
+Returns
+^^^^^^^
+``Tuple[str, str]`` A tuple containing the avaiable formats
 
-      :rtype: :class:`Tuple[str, str]`
-      :returns:  A tuple containing the available formats
-      :raises: :class:`ValueError` if the code is not a code supported by the API
+Raises
+^^^^^^
+``ValueError`` if the code provided is not supported by the API
 
-    .. py:function:: pick_available_format(code, priority)
-      :module: vadivelu
-      :param code: The HTTP code to use
-      :type code: :class:`int`
-      :param priority: The format to pick in the case both gif and jpg are available (default: gif)
-      :type priority: :class:`str`
+``pick_available_format(code, priority)``
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Pick a format (gif or jpg) that the API supports for a specific HTTP code.
 
-      Pick a format (gif or jpg) that the API supports for a specific HTTP code.
+Paremeters
+^^^^^^^^^^
+code: ``int``
+    The HTTP code to use
+priority: ``str``
+    The format to pick in the case both gif and jpg are available, defaults to gif
 
-      :rtype: :class:`str`
-      :returns: The picked format (gif or jpg)
-      :raises: :class:`ValueError` ``priority`` is not gif or jpg
+Returns
+^^^^^^^
+``str`` The chosen format (gif or jpg)
 
-    .. py:function:: get_media_url(code, media_format)
-      :module: vadivelu
-      :param code: The HTTP code to use
-      :type code: :class:`int`
-      :param media_format: The media format to get (gif or jpg)
-      :type media_format: :class:`str`
+Raises
+^^^^^^
+``ValueError`` if the code provided is not supported by the API or if ``priority`` is not *gif* or *jpg*
 
-      Get the media URL for the specified code in the specified format.
+``get_media_url(code, media_format)``
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Get the media URL for the specified code in the specified format.
 
-      :rtype: :class:`str`
-      :returns: The URL for the media
-      :raises: :class:`ValueError` ``media_format`` is not available for the given code, use :func:`pick_available_format` to avoid this error
+Paremeters
+^^^^^^^^^^
+code: ``int``
+    The HTTP code to use
+media_format: ``str``
+    The media format to get (gif or jpg)
+
+Returns
+^^^^^^^
+``str`` Theurl for the media
+
+Raises
+^^^^^^
+``ValueError`` ``media_format`` is not available for the given code, use ``pick_available_format`` to avoid this error
 
 Example
 -------
